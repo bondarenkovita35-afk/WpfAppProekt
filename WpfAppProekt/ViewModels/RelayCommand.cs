@@ -3,10 +3,8 @@ using System.Windows.Input;
 
 namespace WpfAppProekt.ViewModels
 {
-    public sealed class RelayCommand : ICommand
+    public sealed class RelayCommand : RelayCommandBase, ICommand
     {
-        public event EventHandler? CanExecuteChanged;
-
         private readonly Action<object?> _execute;
         private readonly Func<object?, bool>? _can;
 

@@ -24,5 +24,10 @@ namespace WpfAppProekt.Views
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
