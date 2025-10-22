@@ -23,5 +23,10 @@ namespace WpfApp1
                 OutputText.Text = $"Привет, {name}!";
             }
         }
+
+        private void NameInput_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }
