@@ -6,20 +6,48 @@
     <Application.Resources>
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="50"/>
             <Setter Property="Padding" Value="10,5"/>
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="#FFDDDDDD"/>
+            <Setter Property="Background" Value="#3B82F6"/>
             <Setter Property="BorderBrush" Value="#FF888888"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="BorderThickness" Value="0"/>
             
             
+            
 
 
         </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="#FF888888"/>
+            <Setter Property="BorderThickness" Value="2"/>
+
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="RowHeight" Value="60"/>
+            <Setter Property="ColumnHeaderHeight" Value="60"/>
+            <Setter Property="HeadersVisibility" Value="All"/>
+            <Setter Property="GridLinesVisibility" Value="All"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF888888"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#FF888888"/>
+
+
+        </Style>
+
+
+
+
     </Application.Resources>
 </Application>
              
