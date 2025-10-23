@@ -8,7 +8,7 @@
              d:DesignWidth="1200" d:DesignHeight="800">
 
     <UserControl.Resources>
-        <!-- Стиль больших кнопок -->
+        <!-- Style big buttons -->
         <Style x:Key="BigButton" TargetType="Button">
             <Setter Property="FontSize" Value="32"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
@@ -18,7 +18,7 @@
             <Setter Property="Margin" Value="0,0,24,0"/>
         </Style>
 
-        <!-- Стиль больших текстовых полей -->
+        <!-- Style this target -->
         <Style x:Key="BigTextBox" TargetType="TextBox">
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Height" Value="80"/>
@@ -30,13 +30,13 @@
     <Grid Margin="40">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Заголовок -->
+            <!-- Titel -->
             <RowDefinition Height="Auto"/>
             <!-- Name -->
             <RowDefinition Height="Auto"/>
             <!-- Price -->
             <RowDefinition Height="Auto"/>
-            <!-- Кнопки -->
+            <!-- Buttons -->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -53,7 +53,7 @@
             <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Заголовок -->
+        <!-- Titel -->
         <TextBlock Grid.ColumnSpan="11"
                    Text="{Binding Title, FallbackValue='Product Form'}"
                    FontSize="48"
@@ -85,7 +85,7 @@
                  Style="{StaticResource BigTextBox}"
                  Text="{Binding Model.Price, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="9" />
 
-        <!-- Кнопки -->
+        <!-- Buttons-->
         <StackPanel Grid.Row="3"
                     Grid.ColumnSpan="9"
                     Orientation="Horizontal"
