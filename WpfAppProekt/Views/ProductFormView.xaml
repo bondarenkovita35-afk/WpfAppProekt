@@ -4,8 +4,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             MinWidth="1200" MinHeight="800"
-             d:DesignWidth="1200" d:DesignHeight="800">
+             MinWidth="1500" MinHeight="1000"
+             d:DesignWidth="1500" d:DesignHeight="1000">
 
     <UserControl.Resources>
         <!-- Style big buttons -->
@@ -35,6 +35,12 @@
             <!-- Name -->
             <RowDefinition Height="Auto"/>
             <!-- Price -->
+            <RowDefinition Height="Auto"/>
+            <!-- Size -->
+            <RowDefinition Height="Auto"/>
+            <!-- Age -->
+            <RowDefinition Height="Auto"/>
+            <!-- Quantity -->
             <RowDefinition Height="Auto"/>
             <!-- Buttons -->
         </Grid.RowDefinitions>
@@ -84,9 +90,31 @@
                  Grid.Column="2"
                  Style="{StaticResource BigTextBox}"
                  Text="{Binding Model.Price, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="9" />
+        <TextBlock Grid.Row="3"
+                   Text="Size:"
+                   FontSize="32"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="0,0,20,0" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="4"
+                 Text="Age:" 
+                    FontSize="32"
+                     FontWeight="Bold"
+                        VerticalAlignment="Center"
+                        Margin="0,0,20,0" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="5"
+                 Text="Quantity:" 
+                    FontSize="32"
+                     FontWeight="Bold"
+                        VerticalAlignment="Center"
+                        Margin="0,0,20,0" Grid.ColumnSpan="2"/> 
+
+
+
+
 
         <!-- Buttons-->
-        <StackPanel Grid.Row="3"
+            <StackPanel Grid.Row="6"
                     Grid.ColumnSpan="9"
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
@@ -108,6 +136,7 @@
                     Background="#E81123"
                     Foreground="White"
                     Command="{Binding DeleteCommand}"/>
+            
         </StackPanel>
     </Grid>
 </UserControl>

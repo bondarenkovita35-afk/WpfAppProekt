@@ -1,32 +1,24 @@
 ﻿using System.Windows;
+using WpfAppProekt.ViewModels;
 
-namespace WpfApp1
+namespace WpfAppProekt
 {
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
 
-        // Обработчик нажатия кнопки
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void InitializeComponent()
         {
-            string name = NameInput.Text.Trim();
-
-            if (string.IsNullOrEmpty(name))
-            {
-                OutputText.Text = "Пожалуйста, введите имя.";
-            }
-            else
-            {
-                OutputText.Text = $"Привет, {name}!";
-            }
+            throw new NotImplementedException();
         }
 
-        private void NameInput_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void ProductFormView_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
-    }
+    }    
 }

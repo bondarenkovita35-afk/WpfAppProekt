@@ -1,13 +1,15 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="WpfAppProekt.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Пример WPF" Height="600" Width="1000">
-    <Grid>
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Text="Enter name:" Margin="0,0,0,10"/>
-        <TextBox x:Name="NameInput" Width="200" Margin="0,0,0,10" TextChanged="NameInput_TextChanged"/>
-        <Button Content="Say Hello" Width="300" Click="Button_Click"/>
-        <TextBlock x:Name="OutputText" Margin="0,10,0,0" FontWeight="Bold"/>
-    </StackPanel>
-</Grid>
+        xmlns:views="clr-namespace:WpfAppProekt.Views"
+        Title="Products" Height="450" Width="800">
+    <Grid Margin="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <views:ProductsView Grid.Column="0" Margin="0 0 8 0"/>
+        <views:ProductFormView Grid.Column="1" Loaded="ProductFormView_Loaded"/>
+    </Grid>
 </Window>

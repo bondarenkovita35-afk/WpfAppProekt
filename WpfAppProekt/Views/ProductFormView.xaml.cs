@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppProekt.Models;
 
 namespace WpfAppProekt.Views
 {
@@ -20,10 +21,19 @@ namespace WpfAppProekt.Views
     /// </summary>
     public partial class ProductFormView : UserControl
     {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public ProductFormView()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         {
             InitializeComponent();
         }
+
+        public string Title { get; set; } = "New product";
+        public Product Model { get; } = new();
+        public ICommand SaveCommand { get; }
+        public ICommand CancelCommand { get; }
+        public ICommand DeleteCommand { get; }
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
