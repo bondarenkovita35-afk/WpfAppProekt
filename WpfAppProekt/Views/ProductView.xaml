@@ -9,7 +9,7 @@
         </StackPanel>
 
         <Canvas>
-            <Button Content="ok" Canvas.Left="46" Canvas.Top="58" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Height="14" VerticalAlignment="Top" Width="25">
+            <Button Content="ok" Canvas.Left="54" Canvas.Top="56" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="14" VerticalAlignment="Top" Width="7">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
